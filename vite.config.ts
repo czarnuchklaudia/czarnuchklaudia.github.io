@@ -11,8 +11,13 @@ export default defineConfig({
     outDir: 'dist',
     rollupOptions: {
       output: {
-        entryFileNames: `[name].mjs`,
+        entryFileNames: `[name].js`,
       },
+    },
+  },
+  server: {
+    headers: {
+      'Permissions-Policy': '',
     },
   },
 });
