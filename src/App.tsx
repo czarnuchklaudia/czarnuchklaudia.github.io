@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Palette, Megaphone, Award, Mail} from 'lucide-react';
+import { Palette, Megaphone, Award, Mail } from 'lucide-react';
 import { WorkCard } from './components/WorkCard';
 import SpringBunny from './images/bunnies.jpg';
 import Bhat from './images/bhat.jpg';
@@ -29,154 +29,75 @@ import DocsCC from './images/DocsCC.png';
 const works = {
   'graphic': [
     {
-      title: "Cartoon Couple",
+      title: "Cartoons",
       description: "",
-      imageUrl: Couple,
-      category: "Graphic Works"
+      imageUrl: [Couple, Portrait],
+      category: "Prace Graficzne"
     },
     {
-      title: "Pleasant moment",
+      title: "Wallpapers",
       description: "",
-      imageUrl: Portrait,
-      category: "Graphic Works"
+      imageUrl: [Landscape, SpringBunny],
+      category: "Prace Graficzne"
     },
     {
-      title: "Spring Rabbits",
-      description: "Wallpaper for laptop.",
-      imageUrl: SpringBunny,
-      category: "Graphic Works"
+      title: "Light Section",
+      description: "",
+      imageUrl: [Gparents, Dog],
+      category: "Prace Graficzne"
     },
     {
-      title: "Artline portrait",
-      description: "",
-      imageUrl: Drawing,
-      category: "Graphic Works"
+        title: "Artline",
+        description: "",
+        imageUrl: [Drawing],
+        category: "Prace Graficzne"
     },
     {
-      title: "Odpoczywający jamnik",
-      description: "",
-      imageUrl: Dog,
-      category: "Graphic Works"
-    },
-    {
-      title: "Dziadkowie",
-      description: "",
-      imageUrl: Gparents,
-      category: "Graphic Works"
-    },
-    {
-      title: "New Landscape",
-      description: "",
-      imageUrl: Landscape,
-      category: "Graphic Works"
-    },
-    {
-      title: "Królik wielkanocny - Margonem",
-      description: "",
-      imageUrl: Margobunny,
-      category: "Graphic Works"
-    },
-    {
-      title: "Motorcycle race",
-      description: "",
-      imageUrl: Moto,
-      category: "Graphic Works"
-    },
+        title: "Detailed Drawing",
+        description: "",
+        imageUrl: [Moto, Margobunny],
+        category: "Prace Graficzne"
+    }
   ],
   'advertising': [
     {
-      title: "Projekt reklamy Coca Cola",
-      description: "https://youtu.be/FsDd_qm_jFU?si=8saBIEJXhcTXxohb",
-      imageUrl: ReklamaCC,
-      category: "Advertising Projects"
-    },
-    {
-      title: "Dokumentacja reklamy - The Sounds of Coca-Cola",
-      description: "https://docs.google.com/document/d/1BsXcCSa7uMceUxNChCGKWGtdEsO6fL7hg4VJsYPV1e0/edit?usp=sharing",
-      imageUrl: DocsCC,
-      category: "Advertising Projects"
-    },
-    {
       title: "Projekt logo - MeanGirls",
       description: "",
-      imageUrl: Mg1,
-      category: "Advertising Projects"
+      imageUrl: [Mg1, Mg2, Mglogo],
+      category: "Projekty Reklamowe"
     },
     {
-      title: "Projekt logo - MeanGirls",
+      title: "Projekt odzieży - MeanGirls",
       description: "",
-      imageUrl: Mg2,
-      category: "Advertising Projects"
+      imageUrl: [MgHoodie, Mgshirt],
+      category: "Projekty Reklamowe"
     },
     {
-      title: "Projekt logo - MeanGirls",
-      description: "",
-      imageUrl: Mglogo,
-      category: "Advertising Projects"
-    },
-    {
-      title: "Projekt bluzy - MeanGirls",
-      description: "",
-      imageUrl: MgHoodie,
-      category: "Advertising Projects"
-    },
-    {
-      title: "Projekt koszulki - MeanGirls",
-      description: "",
-      imageUrl: Mgshirt,
-      category: "Advertising Projects"
-    },
+        title: "Reklama CocaCola",
+        description: "https://youtu.be/FsDd_qm_jFU?si=8saBIEJXhcTXxohb",
+        imageUrl: [ReklamaCC, DocsCC],
+        category: "Projekty Reklamowe"
+    }
   ],
   'cas': [
     {
-      title: "Projekt czapki #1",
+      title: "Projekty czapek",
       description: "",
-      imageUrl: Bhat,
+      imageUrl: [Bhat, Ghat, Fcap, Grhat],
       category: "Aktywności dla CAS"
     },
     {
-      title: "Projekt czapki #2",
+      title: "Plakaty",
       description: "",
-      imageUrl: Ghat,
-      category: "Aktywności dla CAS"
-    },
-    {
-      title: "Projekt czapki #3",
-      description: "",
-      imageUrl: Fcap,
-      category: "Aktywności dla CAS"
-    },
-    {
-      title: "Projekt czapki #4",
-      description: "",
-      imageUrl: Grhat,
-      category: "Aktywności dla CAS"
-    },
-    {
-      title: "Plakat #1",
-      description: "",
-      imageUrl: Plakat1,
-      category: "Aktywności dla CAS"
-    },
-    {
-      title: "Plakat #2",
-      description: "",
-      imageUrl: Plakat2,
-      category: "Aktywności dla CAS"
-    },
-    {
-      title: "Plakat #3",
-      description: "",
-      imageUrl: Plakat3,
+      imageUrl: [Plakat1, Plakat2, Plakat3],
       category: "Aktywności dla CAS"
     },
     {
       title: "Post CAS",
-      description: "Post o nowym asortymiencie i zniżce dla klientów Centrum Aktywności Społeczniej.",
-      imageUrl: PostCAS,
+      description: "",
+      imageUrl: [PostCAS],
       category: "Aktywności dla CAS"
-    },
-
+    }
   ]
 };
 
@@ -209,27 +130,18 @@ function App() {
           <div className="max-w-6xl mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <h2 className={"text-2xl font-bold mb-8 text-gray-700 mb-0"}>Klaudia Czarnuch</h2>
+                <h2 className={"text-2xl font-bold mb-0 text-gray-700"}>Klaudia Czarnuch</h2>
               </div>
               <div className="flex space-x-8">
-                <a
-                    href="#graphic"
-                    className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors"
-                >
+                <a href="#graphic" className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors">
                   <Palette className="w-4 h-4" />
                   <span className={'spanTitle'}>Prace graficzne</span>
                 </a>
-                <a
-                    href="#advertising"
-                    className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors"
-                >
+                <a href="#advertising" className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors">
                   <Megaphone className="w-4 h-4" />
                   <span className={'spanTitle'}>Projekty reklamowe</span>
                 </a>
-                <a
-                    href="#cas"
-                    className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors"
-                >
+                <a href="#cas" className="flex items-center space-x-1 text-gray-600 hover:text-blue-600 transition-colors">
                   <Award className="w-4 h-4" />
                   <span className={'spanTitle'}>Aktywności CAS</span>
                 </a>
@@ -259,7 +171,7 @@ function App() {
         </main>
 
         {/* Sticky Footer */}
-        <footer className="sticky bottom-0 bg-white border-t">
+        <footer className="sticky bottom-0 bg-white border-t z-40">
           <div className="max-w-6xl mx-auto px-4 py-4">
             <div className="flex items-center justify-center space-x-2 text-gray-600">
               <Mail className="w-4 h-4" />
